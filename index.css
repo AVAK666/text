@@ -1,0 +1,287 @@
+.navbar-default .navbar-nav>li>a {
+    color: #333;
+    font-size: 16px;
+}
+
+#mymenu ul li a {
+    padding: 20px 12px;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 5px #fff solid;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #c2baa5;
+    border-bottom: 2px #c2baa5 solid;
+}
+
+.navbar-nav {
+    border-top: #c2baa5 solid 1px;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.logo{padding-top: 20px;margin-bottom: 28px;}
+.mymenu{background-color: #fff;border: none;margin-bottom: 0px;border-top: 1px solid #c2baa5;font-size: 16px;}
+.mymenu li{line-height: 50px;}
+.mymenu li:hover{border-bottom: 2px solid #c2baa5;}
+.mymenu li a{color:#000;}
+.mymenu li a:hover{color:#c2baa5;background: #fff;}
+
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.center {
+    text-align: center;
+    padding: 43px 0;
+    font-size: 30px;
+    margin: 0 auto;
+}
+
+/* div{
+    overflow: hidden;
+    float: left;
+    margin: 10px;
+} */
+
+
+
+div img {
+    cursor: pointer;
+    transition: all .4s;
+}
+
+#imgmove a:hover img {
+    transform: scale(1.05);
+}
+
+/* .pic03:hover .pic04{display: block;} */
+
+.work-cover>p {
+    font-size: 28px;
+    line-height: 28px;
+    color: #ffffff;
+    font-weight: 100;
+    letter-spacing: 10px;
+    text-align: center;
+    position: absolute;
+    top: 99px;
+    left: 70px;
+    /* display: none; */
+}
+
+#imgmove a:hover .work-cover>p {
+    display: block;
+}
+
+.par-border {
+    border: 1px #e9e9e9 solid;
+}
+
+.bottomPic {
+    padding: 50px 0;
+}
+
+.ul01>li {
+    list-style: none;
+    float: left;
+    width: 20%;
+    padding: 10px 12px;
+    float: left;
+    text-align: center;
+    position: relative
+}
+
+.ul01>li>a {
+    color: gray;
+}
+
+.ul01>li>a:hover {
+    color: black;
+}
+
+.dropdown {
+    list-style: none;
+}
+
+.dropdown>a {
+    color: black;
+}
+
+.dropdown-menu>li>a:hover {
+    color: #c2baa5;
+    background: rgb(255, 255, 255);
+}
+
+.dropdown:hover .list_menu {
+    display: block;
+}
+
+/* 第二个页面css */
+
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* <!-- 框组开始 --> */
+
+.frame {
+    float: left;
+}
+
+.frame>ul>li {
+    list-style: none;
+}
+
+.frame>ul>li>a {
+    width: 216px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    text-overflow: ellipsis;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    border-top: 1px solid #cacaca;
+    background: rgb(111, 111, 111);
+    text-decoration: none;
+}
+
+.frame {
+    position: relative;
+    left: -26px;
+    top: 20px;
+    display: inline;
+}
+
+.frame>ul>li>a:hover {
+    background: rgb(182, 181, 181);
+}
+
+/* 框组结束 */
+
+/* 文字和线start */
+
+.dd1 {
+    width: 25%;
+    height: 2px;
+    background: #004caa;
+    float: left;
+}
+
+.dd2 {
+    width: 53%;
+    height: 2px;
+    background: #717171;
+    float: left;
+}
+
+.Menu01 {
+    position: relative;
+    top: -389px;
+    left: 274px;
+}
+
+/* 文字和线end */
+
+/* <!-- type 开始 -->   */
+
+.dl01>dd {
+    float: left;
+    position: relative;
+    top: -36px;
+    left: 65px;
+}
+
+.dl01>dd>a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 50px;
+    margin-right: -33px;
+}
+
+.dl01>dd>a:hover {
+    background: #3c27b0;
+    color: white;
+    border-radius: 150px;
+}
+
+.type1 {
+    display: block;
+float: left;
+    position: relative;
+    top: -364px;
+    left:297px;
+}
+/* <!-- type 结束 -->   */
+
+
+/* 图片组开始 */
+.pic05>li {
+    list-style: none;
+    float: left;
+  }
+
+  .img-responsive,
+  .thumbnail a>img,
+  .thumbnail>img {
+    display: block;
+    max-width: 79%;
+    height: auto;
+   
+  }
+
+  /* 图片组结束 */
+
+  /* 产品分类开始 */
+  /* .btn{background:white; color: black;}
+ .btn:hover{background: red; color: white;}
+ .thumbnail:hover{ border-color: red; } */
+ /* 产品结束 */
+/* 页面2结束 */
+
+/* 页面5开始 */
+.select1:hover {
+    -moz-box-shadow: -4px 4px 11px #333333;
+    -webkit-box-shadow: -4px 4px 11px #333333;
+    box-shadow: -4px 4px 11px #333333;
+}
+
+.select1>optgroup>option {
+    color: black;
+
+}
+
+.select1>optgroup>option>a:hover {
+    background: rgb(240, 11, 11);
+}
+
+.panel1 {
+    color: rgb(121, 121, 121);
+}
+.red{color: red;}
+
+.btn{color: white;
+    background-color: #337ab7;
+border-color: #2e6da4;
+padding: 10px 27px;
+font-size: 18px;
+line-height: 1.3333333;
+border-radius: 6px; margin-top: 10px;
+}
+.btn:hover{background:#165994 ; color: white;}
+
+/* 页面5结束 */
+
+.btn{background:white; color: black;}
+ .btn:hover{background: red; color: white;}
+ .thumbnail:hover{ border-color: red; }

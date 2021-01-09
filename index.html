@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="booot strop通用插件/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+
+    
+  <!--注意引入顺序  -->
+  <link rel="stylesheet" href="booot strop通用插件/css/bootstrap.min.css">
+  <script src="booot strop通用插件/js/jquery-3.4.1.min.js"></script>
+  <script src="booot strop通用插件/js/bootstrap.min.js"></script>
+
+    <style>
+
+    </style>
+    <script>
+        ///实现图片大小图无痕切换思路：
+        //1监视浏览器的宽度  
+        $(window).resize(function () {
+            if ($(window).width() <= 768) {
+                $(".carousel").each(function () {
+                    var imgdata = $(this).parent().data("imgdata");
+                    $(this).attr("src", "img/" + imgdata);
+                })
+            }
+            else {
+                console.log(2);
+            }
+        })
+        //2当达到768px以下的时候
+        //3需要将img src路径更换为小图的路径
+
+
+        $(function () {
+            var height = document.documentElement.clientHeight;
+            document.getElementById('iframe-page-content').style.height = height + 'px';
+        });
+        var menuClick = function (menuUrl) {
+            $("#iframe-page-content").attr('src', menuUrl);
+        };
+
+
+        $(document).ready(function () {
+            $(".dropmenu").mouseover(function(){
+                    $(this).find("ul").show();
+
+            })
+            $(".dropmenu").mouseout(function(){
+                    $(this).find("ul").hide();
+
+            })
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid" style="margin-left: 0; margin-right: 0">
+            <img src="img/logo.jpg" style="display:block; margin:20px auto">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myMenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-collapse collapse" style="text-align: center;" id="myMenu">
+
+                <ul class="nav navbar-nav" style="display: inline-block;float: none;">
+
+                    <li class="text-center"><a href="#">Home</a></li>
+
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">Domain</a>
+                        <ul class="dropdown-menu list_menu">
+                            <li><a href="index02.html">Agricultural</a></li>
+                            <li><a href="#">Construction</a></li>
+                            <li><a href="#">RoadMachinery</a></li>
+                            <li><a href="#">Handling</a></li>
+                            <li><a href="#">Mining</a></li>
+                            <li><a href="#">Special-Purpose Vehicle</a></li>
+                            <li><a href="#">Marine Power</a></li>
+
+
+                        </ul>
+
+                    </li>
+
+                    <li class="text-center"><a href="index03.html">Support</a></li>
+                    <li class="text-center"><a href="index04.html">Technical</a></li>
+                    <li class="text-center"><a href="index05.html">Negotiage</a></li>
+                    <li class="text-center"><a href="index06.html">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">Domain</a>
+                        <ul class="dropdown-menu list_menu">
+                            
+                            <li><a href="#">Chinesw</a></li>
+                            <li><a href="#">English</a></li>
+
+
+                        </ul>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   <!-- 面包屑-->
+   <div class="bread hidden-xs" style="position: relative; top: -39px; left: 20px;">Current Location: <a href="#">Home</a> &gt; <a href="#">Construction</a></div>
+   <!--面包屑结束-->
+   
+
+    <!-- 轮播图 -->
+    <div id="demo" class="carousel slide" data-ride="carousel"
+        style="position: relative; margin: -28px auto; width: 70%; height: 70%px;" data-interval="1000">
+
+        <!-- 指示符 -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- 轮播图片 -->
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-imgdata="small-enbanner1.jpg">
+                <img src="img/enbanner1.jpg">
+            </div>
+            <div class="carousel-item" data-imgdata="small-enbanner2.jpg">
+                <img src="img/enbanner2.jpg">
+            </div>
+            <div class="carousel-item" data-imgdata="small-enbanner3.jpg">
+                <img src="img/enbanner3.jpg">
+            </div>
+        </div>
+
+        <!-- 左右切换按钮 -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+    <!-- 缩略图 -->
+    <div class="Technical Support">
+        <h2 class="center">Technical Support</h2>
+    </div>
+    <div class="container">
+
+
+
+        <div class="row-fluid" style="margin: 0 auto;">
+            <div class="box col-lg-4 col-xs-4">
+                <div class="thumbnail" id="imgmove">
+                    <a href="#"><img src="img/in_8.jpg" class="img-responsive"></a>
+                </div>
+                <div class="work-cover">
+                    <p class="show01">Design</p>
+                </div>
+                <div class="caption">
+                    <h4 style="text-align: center;">China Yituo Group Technology Center</h4>
+
+                </div>
+
+            </div>
+            <div class="box col-lg-4 col-xs-4">
+                <div class="thumbnail" id="imgmove">
+                    <a href="#"><img src="img/in_9.jpg" class="img-responsive"></a> </div>
+                <div class="work-cover">
+                    <p>Development</p>
+                </div>
+                <div class="caption">
+                    <h4 style="text-align: center;">CITIC</h4>
+
+                </div>
+
+            </div>
+
+
+            <div class="box col-lg-4 col-xs-4">
+                <div class="thumbnail" id="imgmove">
+                    <a href="#"><img src="img/in_10.jpg" class="img-responsive"></a> </div>
+                <div class="work-cover">
+                    <p>Manufacture</p>
+                </div>
+                <div class="caption">
+                    <h4 style="text-align: center;">Ruiteng Machinery</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 合作伙伴 -->
+
+    <div class="contain txt02">
+        <h2 class=" center" style="text-align: center;">Cooperative Partner</h2>
+    </div>
+    <div class="container">
+
+        <!-- responsive: 响应的 -->
+        <div class="row">
+            <div class="col-xs-2 col-lg2 par-border"><a href="#"><img src="img/ad03.jpg" class="img-responsive"> </a>
+            </div>
+            <div class="col-xs-2 col-lg2 par-border"><a href="#"><img src="img/ad03.jpg" class="img-responsive"> </a>
+            </div>
+            <div class="col-xs-2 col-lg2 par-border"><a href="#"><img src="img/ad03.jpg" class="img-responsive"> </a>
+            </div>
+            <div class="col-xs-2 col-lg2 par-border"><a href="#"><img src="img/ad03.jpg" class="img-responsive"> </a>
+            </div>
+            <div class="col-xs-2 col-lg2 par-border"><a href="#"><img src="img/ad03.jpg" class="img-responsive"> </a>
+            </div>
+            <div class="col-xs-2 col-lg2 par-border"><a href="#"><img src="img/ad03.jpg" class="img-responsive"> </a>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-xs-2 col-lg2 par-border"><a href="#"><img src="img/ad04.jpg" class="img-responsive"> </a>
+            </div>
+            <div class="col-xs-2 col-lg2 par-border"><a href="#"><img src="img/ad04.jpg" class="img-responsive"> </a>
+            </div>
+            <div class="col-xs-2 col-lg2 par-border"><a href="#"><img src="img/ad04.jpg" class="img-responsive"> </a>
+            </div>
+            <div class="col-xs-2 col-lg2 par-border"><a href="#"><img src="img/ad04.jpg" class="img-responsive"> </a>
+            </div>
+            <div class="col-xs-2 col-lg2 par-border"><a href="#"><img src="img/ad04.jpg" class="img-responsive"> </a>
+            </div>
+            <div class="col-xs-2 col-lg2 par-border"><a href="#"><img src="img/ad04.jpg" class="img-responsive"> </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- 底部图片 -->
+
+    <div class="col-xs-4"></div>
+    <div class="col-xs-4 bottomPic">
+        <img src="img/in_bottom.jpg" class="img-responsive">
+    </div>
+    <div class="col-xs-4"></div>
+
+    <!-- 底部图标 -->
+    <div class="foot container">
+        <div class="col-lg-4 col-xs-3"></div>
+        <div class="col-lg-4 col-xs-6">
+            <ul class="ul01">
+                <li><a href="#"><i style="font-size: 19px;" class="fa fa-facebook-official fa-2x"
+                            aria-hidden="true"></i></a> </li>
+                <li><a href="#"><i style="font-size: 19px;" class="fa fa-weixin" aria-hidden="true"
+                            aria-hidden="true"></i></a> </li>
+                <li><a href="#"><i style="font-size: 19px;" class="fa fa-qq" aria-hidden="true"
+                            aria-hidden="true"></i></a> </li>
+                <li><a href="#"><i style="font-size: 19px;" class="fa fa-phone-square" aria-hidden="true"></i></a> </li>
+                <li><a href="#"><i style="font-size: 19px;" class="fa fa-envelope" aria-hidden="true"></i></a> </li>
+
+            </ul>
+        </div>
+        <div class="col-lg-4 col-xs-3"></div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="booot strop通用插件/css/bootstrap.min.css" rel="stylesheet">
+    <script src="booot strop通用插件/js/jquery-3.4.1.min.js"></script>
+    <script src="booot strop通用插件/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script>
+        //html标签元素 有一个属性叫做data-*   
+        $(document).ready(function () {
+            console.log($("a").data("zhangwen"));
+            $('.carousel').carousel(
+
+                {
+                    interval: 5000,
+                    pause: "null"
+                }
+            )
+            ///实现图片大小图无痕切换思路：
+            //1监视浏览器的宽度  
+            $(window).resize(function () {
+                if ($(window).width() <= 768) {
+                    $("img").each(function () {
+                        var imgdata = $(this).parent().data("imgdata");
+                        $(this).attr("src", "img/" + imgdata);
+                    })
+                }
+                else {
+                    console.log(2);
+                }
+            })
+            //2当达到768px以下的时候
+            //3需要将img src路径更换为小图的路径
+
+        })
+
+        $(document).ready(function () {
+            $(".dropmenu").mouseover(function () {
+                $(this).find("ul").show();
+
+            })
+            $(".dropmenu").mouseout(function () {
+                $(this).find("ul").hide();
+
+            })
+
+        })
+
+    </script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .logo {
+            padding-top: 20px;
+            margin-bottom: 28px;
+        }
+
+        .mymenu {
+            background-color: #fff;
+            border: none;
+            margin-bottom: 0px;
+            border-top: 1px solid #c2baa5;
+            font-size: 16px;
+        }
+
+        .mymenu li {
+            line-height: 50px;
+        }
+
+        .mymenu li:hover {
+            border-bottom: 2px solid #c2baa5;
+        }
+
+        .mymenu li a {
+            color: #000;
+        }
+
+        .mymenu li a:hover {
+            color: #c2baa5;
+            background: #fff;
+        }
+
+        .box-img {
+            transition: all 1s;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!--logo-->
+        <div class="logo text-center">
+            <img src="img/logo.jpg">
+        </div>
+        <!--logo end-->
+        <!--导航条-->
+        <nav class="navbar navbar-default mymenu">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav nav-justified">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropmenu" style="padding-bottom: 2px;"><a href="#">Domain</a>
+                            <ul class="dropdown-menu col-xs-12" style="margin-top: 2px;">
+                                <li class="text-center"><a href="#">Action</a></li>
+                                <li class="text-center"><a href="#">Another action</a></li>
+                                <li class="text-center"><a href="#">Something else here</a></li>
+                                <li class="text-center"><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="index03.html">Support</a></li>
+                        <li><a href="index04.html">Technical</a></li>
+                        <li><a href="index05.html">Negotiate</a></li>
+                        <li><a href="index06.html">Contact</a></li>
+                        <li><a href="#">Language</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--导航条-->
+            <!-- 面包屑-->
+   <div class="bread hidden-xs" style="position: relative; top: -19px;
+   left: -91px;">Current Location: <a href="#">Home</a> &gt; <a href="#">Construction</a></div>
+   <!--面包屑结束-->
+            <!-- 轮播开始 -->
+            <div class="container">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner center-block" role="listbox">
+                        <div class="item active" data-small_imgdata="small_enbanner1.jpg"
+                            data-middle_imgdata="enbanner1.jpg" data-big_imgdata="bigenbanner1.jpg">
+                            <img src="img/y401.jpg" class="img-responsive" alt="...">
+                        </div>
+                        <div class="item" data-imgdata="small_enbanner4.jpg">
+                            <img src="img/y402.jpg" class="img-responsive" alt="...">
+                        </div>
+
+                    </div>
+
+
+
+                    </a>
+                </div>
+            </div>
+            <!-- 轮播结束 -->
+
+            <!-- 框组开始 -->
+            <div class="container">
+                <div class="frame">
+                    <ul>
+                        <li><a href="#" class="active">YTO</a></li>
+                        <li><a href="#">CITIC</a></li>
+                        <li><a href="#">Construction</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- 框组结束 -->
+
+            <!-- 文字和线开始-->
+            <div class="Menu01" style="position: relative; left: 214px; top: -157px;">
+                <h2>China Tractor Research Institute</h2>
+                <dl>
+                    <dd class="dd1"></dd>
+                    <dd class="dd2"></dd>
+                </dl>
+            </div>
+            <!-- 文字和线结束 -->
+
+            <div>
+                <img src="img/xq.png" style="width: 80%; position:relative;left: 272px;
+    top: -100px;">
+
+            </div>
+
+
+            <!-- 文字开始 -->
+            <div class="container wenzi " style="font-size: 12px;  position: relative ; left: 200px;" >
+            <p>Luoyang Tractor Research Institute (hereinafter referred to as "the Los drag"), the State Scientific
+                Research institutions and national first batch of state-level enterprise technical centers, research and
+                development institutions to set up branches in France 1Ge. Owned Tractor Power System State Key
+                Laboratory and Henan Province tractor key technology key laboratory. As the core R & D institutions of
+                China Yituo Group Co., Ltd., R & D strength and scale are among the best in the domestic industry. It is
+                mainly engaged in the development and design of agricultural equipment machinery, power machinery and
+                its parts and components, trial production and CAEtechnology, Electrical equipment, test equipment, such
+                as the development of research, commitment and organization of national tractor products technical
+                standards, revision work.</br>
+                Luotuo owned institution or organization authorized by the State: ' National Tractor Quality Supervision
+                and Inspection Center ' , 'national scientific and technological achievements Test testing organizations
+                ' , " vehicle emission pollution testing organizations " , "national road transport vehicle fuel</br>
+                consumption testing organizations " , International Organization for Economic Co - operation and</br>
+                Development ( OECD ) China Official Tractor Test Station. Affiliated management of the institutions or
+                organizations are: National Tractor Standardization Technical Committee, China Agricultural Mechanics
+                Society Tractor Society, China Agricultural Machinery Industry Association tractor industry branch.</br>
+                Luotuo where the tractor, large and medium power wheeled tractors, non-road diesel engine and its</br>
+                electronic control system and other product development and related testing equipment development and
+                other technical areas has always maintained a leading domestic level.</br>
+                Luobo is located in Luoyang, known as the "Millennium Dili Peony Flower City", has an international
+                standard R & D test base, gathered around a number of research institutes and universities. Engaged in
+                product development and design and related technical research teamMore than 400 people, of which, with
+                senior titles more than 300 staff , expert talent 64 people.</br>
+                Luotuo belongs to the first tractor company (A shares: 601038, H shares: 00038. by the China Yusuo Group
+                Co., Ltd. holding). Has two wholly owned subsidiaries: Luoyang Xiyuan vehicle inspection and Power</br>
+                Limited, Luoyang dragged Steam Engineering Vehicle Technology Co., Ltd. And the European certification
+                organization joint-stock companies to invest in the establishment of the Luoyang Italian Technology</br>
+                Consulting Co., Ltd..</p></div>
+
+                <!-- 底部图片 -->
+
+<div class="container">
+    
+
+
+    <div class="col-xs-4"></div>
+    <div class="col-xs-4 bottomPic">
+        <img src="img/in_bottom.jpg" class="img-responsive">
+    </div>
+    <div class="col-xs-4"></div>
+
+    <!-- 底部图标 -->
+    <div class="foot container">
+      
+        <div class="col-lg-4 col-xs-6  col-lg-offset-4  col-xs-offset-3">
+            <ul class="ul01">
+                <li><a href="#"><i style="font-size: 19px;" class="fa fa-facebook-official fa-2x"
+                            aria-hidden="true"></i></a> </li>
+                <li><a href="#"><i style="font-size: 19px;" class="fa fa-weixin" aria-hidden="true"
+                            aria-hidden="true"></i></a> </li>
+                <li><a href="#"><i style="font-size: 19px;" class="fa fa-qq" aria-hidden="true"
+                            aria-hidden="true"></i></a> </li>
+                <li><a href="#"><i style="font-size: 19px;" class="fa fa-phone-square" aria-hidden="true"></i></a> </li>
+                <li><a href="#"><i style="font-size: 19px;" class="fa fa-envelope" aria-hidden="true"></i></a> </li>
+
+            </ul>
+        </div>
+       
+    
+</div>
+         
+</body>
+
+</html>
